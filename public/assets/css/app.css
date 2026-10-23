@@ -1,9 +1,3 @@
-/* ========================================
-   PEDALGO - RENTAL SEPEDA
-   File: public/assets/css/app.css
-======================================== */
-
-/* RESET */
 * {
     box-sizing: border-box;
 }
@@ -24,9 +18,7 @@ img {
     max-width: 100%;
 }
 
-/* ========================================
-   NAVBAR
-======================================== */
+/* NAVBAR */
 .navbar {
     background: #203d2d;
     padding: 16px 0;
@@ -60,9 +52,7 @@ img {
     color: #d8f17b !important;
 }
 
-/* ========================================
-   CONTAINER
-======================================== */
+/* CONTAINER */
 .container {
     width: 100%;
     max-width: 1400px;
@@ -72,9 +62,7 @@ img {
     padding-left: 24px;
 }
 
-/* ========================================
-   HERO BERANDA
-======================================== */
+/* HERO BERANDA */
 .hero-section {
     position: relative;
     display: grid;
@@ -128,7 +116,7 @@ img {
     margin: 0 0 28px;
 }
 
-/* Tombol beranda */
+/* TOMBOL BERANDA */
 .hero-actions {
     display: flex;
     align-items: center;
@@ -161,7 +149,7 @@ img {
     font-size: 14px;
 }
 
-/* Gambar hero: tampil jika elemen gambarnya tersedia */
+/* GAMBAR HERO */
 .hero-image {
     display: block;
     width: 100%;
@@ -190,9 +178,7 @@ img {
     margin: 4px 0;
 }
 
-/* ========================================
-   DAFTAR SEPEDA
-======================================== */
+/* DAFTAR SEPEDA */
 #daftar-sepeda {
     scroll-margin-top: 24px;
 }
@@ -209,11 +195,11 @@ img {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(32, 61, 45, 0.08);
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
+    transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(32, 61, 45, 0.12);
 }
 
@@ -241,7 +227,7 @@ img {
     margin-bottom: 12px;
 }
 
-/* Status ketersediaan */
+/* STATUS KETERSEDIAAN */
 .badge {
     display: inline-block;
     padding: 6px 10px;
@@ -250,7 +236,7 @@ img {
     font-weight: 700;
 }
 
-/* Tombol detail */
+/* TOMBOL DETAIL */
 .btn-rental,
 .card .btn-success {
     display: inline-block;
@@ -269,9 +255,7 @@ img {
     background: #245c3b;
 }
 
-/* ========================================
-   DETAIL SEPEDA
-======================================== */
+/* DETAIL SEPEDA */
 .detail-image {
     display: block;
     width: 100%;
@@ -281,16 +265,12 @@ img {
     border-radius: 18px;
 }
 
-/* ========================================
-   FOOTER
-======================================== */
+/* FOOTER */
 footer {
     color: #68756c;
 }
 
-/* ========================================
-   RESPONSIVE TABLET DAN HP
-======================================== */
+/* RESPONSIVE TABLET DAN HP */
 @media (max-width: 768px) {
     .hero-section {
         grid-template-columns: minmax(0, 1fr);

@@ -1,96 +1,47 @@
+@extends('layouts.app')
 
+@section('title', 'Detail Sepeda | PEDALGO')
 
-.hero-section {
-    display: grid;
-    grid-template-columns: 1fr 0.9fr;
-    align-items: center;
-    gap: 48px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 80px 24px;
-    overflow: hidden;
-}
+@section('content')
+<main class="container py-5">
+    <a href="{{ route('bikes.index') }}" class="btn btn-outline-success mb-4">
+        &larr; Kembali ke Daftar Sepeda
+    </a>
 
-.hero-content {
-    min-width: 0;
-}
+    <div class="row align-items-center g-4">
+        <div class="col-md-6">
+            <img
+                src="{{ asset('assets/images/' . $bike->image) }}"
+                alt="Sepeda {{ $bike->brand }}"
+                class="img-fluid rounded shadow-sm"
+            >
+        </div>
 
-.hero-content .hero-label {
-    color: #397c50;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
+        <div class="col-md-6">
+            <p class="text-success fw-bold">DETAIL SEPEDA</p>
 
-.hero-content h1 {
-    color: #29372e;
-    font-size: clamp(36px, 4vw, 60px);
-    line-height: 1.15;
-    font-weight: 800;
-    margin-bottom: 22px;
-}
+            <h1>{{ $bike->brand }}</h1>
+            <h4>{{ $bike->type }}</h4>
 
-.hero-content .hero-description {
-    color: #66756b;
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 28px;
-}
+            <p>
+                Harga sewa:
+                <strong>
+                    Rp{{ number_format($bike->rent_price, 0, ',', '.') }}
+                </strong>
+                / hari
+            </p>
 
-.hero-actions {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-}
+            <p>Jumlah gear: {{ $bike->gear_count }}</p>
 
-
-.hero-image {
-    width: 100%;
-    min-width: 0;
-    text-align: center;
-}
-
-.hero-image img {
-    display: block;
-    width: 100%;
-    max-width: 540px;
-    height: auto;
-    aspect-ratio: 1 / 0.8;
-    object-fit: contain;
-    margin: 0 auto;
-    border-radius: 28px;
-    cursor: default;
-}
-
-.hero-caption {
-    margin-top: 14px;
-    text-align: center;
-    color: #344b3b;
-}
-
-.hero-caption p {
-    margin: 4px 0;
-}
-
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 768px) {
-    .hero-section {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 44px 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 38px;
-    }
-
-    .hero-content .hero-description {
-        font-size: 16px;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-    }
-}
+            <p>
+                Status:
+                @if ($bike->available)
+                    <span class="badge bg-success">Tersedia</span>
+                @else
+                    <span class="badge bg-danger">Tidak tersedia</span>
+                @endif
+            </p>
+        </div>
+    </div>
+</main>
+@endsection
