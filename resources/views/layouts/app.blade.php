@@ -1,0 +1,358 @@
+
+/* ========================================
+   PEDALGO - RENTAL SEPEDA
+   File: public/assets/css/app.css
+======================================== */
+
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f4f7f1;
+    color: #29372e;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+.navbar {
+    background: #203d2d;
+    padding: 16px 0;
+}
+
+.navbar .container,
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none !important;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar .nav-link {
+    color: #e5eee6 !important;
+    padding: 8px 12px;
+}
+
+.navbar .nav-link:hover {
+    color: #d8f17b !important;
+}
+
+/* ========================================
+   CONTAINER
+======================================== */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+/* ========================================
+   HERO BERANDA
+======================================== */
+.hero-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: 48px;
+    width: calc(100% - 48px);
+    max-width: 1400px;
+    min-height: 440px;
+    margin: 32px auto 56px;
+    padding: 64px;
+    overflow: hidden;
+    background: linear-gradient(120deg, #203d2d, #396f4e);
+    border-radius: 24px;
+}
+
+.hero-section::before,
+.hero-section::after {
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+    width: 100%;
+}
+
+.hero-label {
+    color: #d8f17b;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin: 0 0 24px;
+}
+
+.hero-content h1,
+.hero-title {
+    color: #fff;
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 24px;
+}
+
+.hero-description {
+    max-width: 700px;
+    color: #edf4ee;
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 0 0 28px;
+}
+
+/* Tombol beranda */
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.hero-button,
+.hero-actions .btn {
+    display: inline-block;
+    padding: 13px 24px;
+    color: #203d2d;
+    background: #d8f17b;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.hero-button:hover,
+.hero-actions .btn:hover {
+    color: #203d2d;
+    background: #c8e56b;
+}
+
+.hero-note {
+    color: #e0e9e1;
+    font-size: 14px;
+}
+
+/* Gambar hero: tampil jika elemen gambarnya tersedia */
+.hero-image {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    max-height: 440px;
+    aspect-ratio: 1 / 0.8;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.hero-caption {
+    margin-top: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-caption p {
+    margin: 4px 0;
+}
+
+/* ========================================
+   DAFTAR SEPEDA
+======================================== */
+#daftar-sepeda {
+    scroll-margin-top: 24px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e4eae2;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(32, 61, 45, 0.08);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(32, 61, 45, 0.12);
+}
+
+.card img,
+.bike-image {
+    display: block;
+    width: 100%;
+    height: 240px;
+    max-width: 100%;
+    object-fit: cover;
+    background: #e5eae4;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #29372e;
+    font-size: 21px;
+    margin: 0 0 8px;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+/* Status ketersediaan */
+.badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Tombol detail */
+.btn-rental,
+.card .btn-success {
+    display: inline-block;
+    color: #fff;
+    background: #367c52;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-rental:hover,
+.card .btn-success:hover {
+    color: #fff;
+    background: #245c3b;
+}
+
+/* ========================================
+   DETAIL SEPEDA
+======================================== */
+.detail-image {
+    display: block;
+    width: 100%;
+    max-height: 430px;
+    object-fit: contain;
+    background: #e5eae4;
+    border-radius: 18px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+footer {
+    color: #68756c;
+}
+
+/* ========================================
+   RESPONSIVE TABLET DAN HP
+======================================== */
+@media (max-width: 768px) {
+    .hero-section {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        width: calc(100% - 28px);
+        min-height: auto;
+        margin: 20px auto 36px;
+        padding: 42px 24px;
+        border-radius: 18px;
+    }
+
+    .hero-content h1,
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        max-height: 320px;
+    }
+
+    .container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .card img,
+    .bike-image {
+        height: 220px;
+    }
+
+    .detail-image {
+        max-height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .hero-section {
+        padding: 32px 20px;
+    }
+
+    .hero-content h1,
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+}
